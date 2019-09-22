@@ -1,0 +1,3 @@
+ALTER TABLE Users
+ADD CONSTRAINT col_LastLoginTime_def
+DEFAULT SYSDATETIME() FOR LastLoginTime
