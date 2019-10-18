@@ -18,4 +18,3 @@ ORDER BY [Full Name],
 		 f.Origin,
 		 f.Destination,
 		 lt.[Type]
-
