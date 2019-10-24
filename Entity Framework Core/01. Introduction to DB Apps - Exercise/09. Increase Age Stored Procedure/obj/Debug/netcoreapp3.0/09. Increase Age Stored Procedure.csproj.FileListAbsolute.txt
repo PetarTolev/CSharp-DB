@@ -1,0 +1,4 @@
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\09. Increase Age Stored Procedure\bin\Debug\netcoreapp3.0\09. Increase Age Stored Procedure.exe
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\09. Increase Age Stored Procedure\obj\Debug\netcoreapp3.0\09. Increase Age Stored Procedure.csprojAssemblyReference.cache
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\09. Increase Age Stored Procedure\obj\Debug\netcoreapp3.0\09. Increase Age Stored Procedure.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\09. Increase Age Stored Procedure\obj\Debug\netcoreapp3.0\09. Increase Age Stored Procedure.AssemblyInfo.cs

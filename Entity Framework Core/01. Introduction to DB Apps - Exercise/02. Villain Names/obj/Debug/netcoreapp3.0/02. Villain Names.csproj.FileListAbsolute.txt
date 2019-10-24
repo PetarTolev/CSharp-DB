@@ -1,0 +1,18 @@
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\02. Villain Names.exe
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\obj\Debug\netcoreapp3.0\02. Villain Names.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\obj\Debug\netcoreapp3.0\02. Villain Names.AssemblyInfo.cs
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\02. Villain Names.deps.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\02. Villain Names.runtimeconfig.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\02. Villain Names.runtimeconfig.dev.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\02. Villain Names.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\02. Villain Names.pdb
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\System.Data.SqlClient.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\runtimes\win-arm64\native\sni.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\runtimes\win-x64\native\sni.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\runtimes\win-x86\native\sni.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\obj\Debug\netcoreapp3.0\02. Villain Names.csprojAssemblyReference.cache
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\obj\Debug\netcoreapp3.0\02. Villain Names.csproj.CopyComplete
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\obj\Debug\netcoreapp3.0\02. Villain Names.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\01. Introduction to DB Apps - Exercise\02. Villain Names\obj\Debug\netcoreapp3.0\02. Villain Names.pdb
