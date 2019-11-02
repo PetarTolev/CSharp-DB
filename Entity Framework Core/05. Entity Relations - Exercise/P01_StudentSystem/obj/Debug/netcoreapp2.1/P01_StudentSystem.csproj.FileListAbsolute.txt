@@ -1,0 +1,9 @@
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\bin\Debug\netcoreapp2.1\P01_StudentSystem.deps.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\bin\Debug\netcoreapp2.1\P01_StudentSystem.runtimeconfig.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\bin\Debug\netcoreapp2.1\P01_StudentSystem.runtimeconfig.dev.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\bin\Debug\netcoreapp2.1\P01_StudentSystem.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\bin\Debug\netcoreapp2.1\P01_StudentSystem.pdb
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\obj\Debug\netcoreapp2.1\P01_StudentSystem.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\obj\Debug\netcoreapp2.1\P01_StudentSystem.AssemblyInfo.cs
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\obj\Debug\netcoreapp2.1\P01_StudentSystem.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P01_StudentSystem\obj\Debug\netcoreapp2.1\P01_StudentSystem.pdb

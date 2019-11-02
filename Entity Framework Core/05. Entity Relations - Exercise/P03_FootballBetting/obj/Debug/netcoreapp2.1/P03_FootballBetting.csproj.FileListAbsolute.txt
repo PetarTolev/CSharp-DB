@@ -1,0 +1,10 @@
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\bin\Debug\netcoreapp2.1\P03_FootballBetting.deps.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\bin\Debug\netcoreapp2.1\P03_FootballBetting.runtimeconfig.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\bin\Debug\netcoreapp2.1\P03_FootballBetting.runtimeconfig.dev.json
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\bin\Debug\netcoreapp2.1\P03_FootballBetting.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\obj\Debug\netcoreapp2.1\P03_FootballBetting.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\obj\Debug\netcoreapp2.1\P03_FootballBetting.AssemblyInfo.cs
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\bin\Debug\netcoreapp2.1\P03_FootballBetting.pdb
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\obj\Debug\netcoreapp2.1\P03_FootballBetting.dll
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\obj\Debug\netcoreapp2.1\P03_FootballBetting.pdb
+C:\Users\th3dr\Documents\Visual Studio 2017\Projects\CSharp-DB\Entity Framework Core\05. Entity Relations - Exercise\P03_FootballBetting\obj\Debug\netcoreapp2.1\P03_FootballBetting.csprojAssemblyReference.cache
