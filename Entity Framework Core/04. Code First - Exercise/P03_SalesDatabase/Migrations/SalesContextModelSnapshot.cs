@@ -45,14 +45,18 @@ namespace P03_SalesDatabase.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Description")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(250)
+                        .HasDefaultValue("No description");
+
                     b.Property<string>("Name")
                         .HasMaxLength(50)
                         .IsUnicode(true);
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(5, 2)");
+                    b.Property<decimal>("Price");
 
-                    b.Property<int>("Quantity");
+                    b.Property<double>("Quantity");
 
                     b.HasKey("ProductId");
 
@@ -67,7 +71,9 @@ namespace P03_SalesDatabase.Migrations
 
                     b.Property<int>("CustomerId");
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("Date")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<int>("ProductId");
 
