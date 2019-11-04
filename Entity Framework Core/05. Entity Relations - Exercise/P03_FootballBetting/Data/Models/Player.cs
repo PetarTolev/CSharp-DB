@@ -6,7 +6,6 @@
     {
         public Player()
         {
-            this.Bets = new HashSet<Bet>();
             this.PlayerStatistics = new HashSet<PlayerStatistic>();
         }
 
@@ -23,8 +22,6 @@
         public Position Position { get; set; }
 
         public bool IsInjured { get; set; }
-
-        public ICollection<Bet> Bets { get; set; }
 
         public ICollection<PlayerStatistic> PlayerStatistics { get; set; }
     }

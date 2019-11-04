@@ -1,7 +1,7 @@
 ﻿namespace P01_StudentSystem.Data.Models
 {
-    using Enums;
     using System;
+    using Enums;
 
     public class Homework
     {
