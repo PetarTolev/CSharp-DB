@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Models;
-    using Configurations;
+    using System.Reflection;
 
     public class StudentSystemContext : DbContext
     {
@@ -37,15 +37,7 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new StudentConfiguration());
-
-            modelBuilder.ApplyConfiguration(new CourseConfiguration());
-
-            modelBuilder.ApplyConfiguration(new ResourceConfiguration());
-
-            modelBuilder.ApplyConfiguration(new HomeworkConfiguration());
-
-            modelBuilder.ApplyConfiguration(new StudentCourseConfiguration());
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             modelBuilder.Seed();
         }

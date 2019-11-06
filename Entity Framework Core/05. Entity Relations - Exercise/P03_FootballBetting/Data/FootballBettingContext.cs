@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Models;
-    using Configurations;
+    using System.Reflection;
 
     public class FootballBettingContext : DbContext
     {
@@ -47,25 +47,7 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new BetConfiguration());
-            
-            modelBuilder.ApplyConfiguration(new ColorConfiguration());
-
-            modelBuilder.ApplyConfiguration(new CountryConfiguration());
-
-            modelBuilder.ApplyConfiguration(new GameConfiguration());
-
-            modelBuilder.ApplyConfiguration(new PlayerConfiguration());
-
-            modelBuilder.ApplyConfiguration(new PlayerStatisticConfiguration());
-
-            modelBuilder.ApplyConfiguration(new PositionConfiguration());
-
-            modelBuilder.ApplyConfiguration(new TeamConfiguration());
-
-            modelBuilder.ApplyConfiguration(new TownConfiguration());
-
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
 }
