@@ -1,0 +1,21 @@
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.deps.json
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.runtimeconfig.json
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.runtimeconfig.dev.json
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.dll
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.pdb
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.csprojAssemblyReference.cache
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.csproj.CoreCompileInputs.cache
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.AssemblyInfoInputs.cache
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.AssemblyInfo.cs
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.dll
+C:\Users\Stoyan\Desktop\Product Shop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.pdb
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.deps.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.runtimeconfig.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.runtimeconfig.dev.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.pdb
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.csprojAssemblyReference.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.AssemblyInfo.cs
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Product Shop\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.pdb
