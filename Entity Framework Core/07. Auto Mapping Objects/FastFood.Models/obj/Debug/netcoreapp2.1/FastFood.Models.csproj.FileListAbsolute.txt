@@ -1,8 +1,0 @@
-C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\07. Auto Mapping Objects\FastFood.Models\bin\Debug\netcoreapp2.1\FastFood.Models.deps.json
-C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\07. Auto Mapping Objects\FastFood.Models\bin\Debug\netcoreapp2.1\FastFood.Models.dll
-C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\07. Auto Mapping Objects\FastFood.Models\bin\Debug\netcoreapp2.1\FastFood.Models.pdb
-C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\07. Auto Mapping Objects\FastFood.Models\obj\Debug\netcoreapp2.1\FastFood.Models.AssemblyInfoInputs.cache
-C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\07. Auto Mapping Objects\FastFood.Models\obj\Debug\netcoreapp2.1\FastFood.Models.AssemblyInfo.cs
-C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\07. Auto Mapping Objects\FastFood.Models\obj\Debug\netcoreapp2.1\FastFood.Models.dll
-C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\07. Auto Mapping Objects\FastFood.Models\obj\Debug\netcoreapp2.1\FastFood.Models.pdb
-C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\07. Auto Mapping Objects\FastFood.Models\obj\Debug\netcoreapp2.1\FastFood.Models.csprojAssemblyReference.cache

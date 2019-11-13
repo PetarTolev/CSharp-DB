@@ -42,7 +42,7 @@
             this.context
                 .SaveChanges();
 
-            return this.RedirectToAction("All", "Positions");
+            return this.RedirectToAction("Success", "Success");
         }
 
         public IActionResult All()

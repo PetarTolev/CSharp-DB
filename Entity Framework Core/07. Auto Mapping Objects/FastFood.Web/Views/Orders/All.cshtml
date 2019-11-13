@@ -7,16 +7,16 @@
 <hr class="hr-2" />
 <table class="table mx-auto">
     <thead>
-        <tr class="row">
-            <th class="col-md-1">#</th>
-            <th class="col-md-2">Order Id</th>
-            <th class="col-md-2">Customer</th>
-            <th class="col-md-2">Employee</th>
-            <th class="col-md-2">Order Time</th>
-        </tr>
+    <tr class="row">
+        <th class="col-md-1">#</th>
+        <th class="col-md-2">Order Id</th>
+        <th class="col-md-2">Customer</th>
+        <th class="col-md-2">Employee</th>
+        <th class="col-md-2">Order Time</th>
+    </tr>
     </thead>
     <tbody>
-        @for(var i = 0; i < Model.Count(); i++)
+    @for(var i = 0; i < Model.Count(); i++)
     {
         <tr class="row">
             <th class="col-md-1">@(i+1)</th>
@@ -28,3 +28,8 @@
     }
     </tbody>
 </table>
+<form>
+    <div align="center">
+        <button type="submit" class="btn btn-primary" asp-controller="Orders" asp-action="Create">Create Order</button>
+    </div>
+</form>
