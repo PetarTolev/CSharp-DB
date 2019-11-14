@@ -14,13 +14,10 @@
         {
             using (var context = new ProductShopContext())
             {
-                var json = GetUsersWithProducts(context);
-
-                Console.WriteLine(json);
             }
         }
 
-        //Problem 1
+        //Problem 1 - Import Users
         public static string ImportUsers(ProductShopContext context, string inputJson)
         {
             var users = JsonConvert.DeserializeObject<User[]>(inputJson)
@@ -33,7 +30,7 @@
             return $"Successfully imported {importedEntities}";
         }
 
-        //Problem 2
+        //Problem 2 - Import Products
         public static string ImportProducts(ProductShopContext context, string inputJson)
         {
             var products = JsonConvert.DeserializeObject<Product[]>(inputJson)
@@ -46,7 +43,7 @@
                 return $"Successfully imported {importedEntities}";
         }
 
-        //Problem 3
+        //Problem 3 - Import Categories
         public static string ImportCategories(ProductShopContext context, string inputJson)
         {
             var categories = JsonConvert.DeserializeObject<Category[]>(inputJson)
@@ -60,7 +57,7 @@
             return $"Successfully imported {importedEntities}";
         }
 
-        //Problem 4
+        //Problem 4 - Import Categories and Products
         public static string ImportCategoryProducts(ProductShopContext context, string inputJson)
         {
             var categoryProducts = JsonConvert.DeserializeObject<CategoryProduct[]>(inputJson);
@@ -72,7 +69,7 @@
             return $"Successfully imported {importedEntities}";
         }
 
-        //Problem 5
+        //Problem 5 - Export Products In Range
         public static string GetProductsInRange(ProductShopContext context)
         {
             var products = context.Products
@@ -92,7 +89,7 @@
             return json;
         }
 
-        //Problem 6
+        //Problem 6 - Export Sold Products
         public static string GetSoldProducts(ProductShopContext context)
         {
             var users = context.Users
@@ -128,7 +125,7 @@
             return json;
         }
 
-        //Problem 7
+        //Problem 7 - Export Categories By Products Count
         public static string GetCategoriesByProductsCount(ProductShopContext context)
         {
             var categories = context.Categories
@@ -158,7 +155,7 @@
             return json;
         }
 
-        //Problem 8
+        //Problem 8 - Export Users and Products
         public static string GetUsersWithProducts(ProductShopContext context)
         {
             var users = context.Users

@@ -2,12 +2,14 @@
 {
     using AutoMapper;
     using Data;
+    using DTO.Export;
     using DTO.Import;
     using Models;
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Serialization;
     using System;
     using System.Collections.Generic;
-    using System.IO;
+    using System.Globalization;
     using System.Linq;
 
     public class StartUp
@@ -18,15 +20,11 @@
 
             using (var context = new CarDealerContext())
             {
-                //context.Database.EnsureCreated();
-
-                var cars = File.ReadAllText(@"..\..\..\Datasets\cars.json");
-
-                Console.WriteLine(ImportCars(context, cars));
+                Console.WriteLine(GetSalesWithAppliedDiscount(context));
             }
         }
 
-        //Problem 9
+        //Problem 9 - Import Suppliers
         public static string ImportSuppliers(CarDealerContext context, string inputJson)
         {
             var suppliers = JsonConvert
@@ -39,7 +37,7 @@
             return $"Successfully imported {countOfInsertedEntities}.";
         }
 
-        //Problem 10
+        //Problem 10 - Import Parts
         public static string ImportParts(CarDealerContext context, string inputJson)
         {
             var supplierIds = context.Suppliers.Select(s => s.Id);
@@ -55,7 +53,7 @@
             return $"Successfully imported {countOfInsertedEntities}.";
         }
 
-        //Problem 11
+        //Problem 11 - Import Cars
         public static string ImportCars(CarDealerContext context, string inputJson)
         {
             var carsImport = JsonConvert.DeserializeObject<CarImportDto[]>(inputJson);
@@ -118,7 +116,7 @@
             return $"Successfully imported {context.Cars.ToList().Count}.";
         }
 
-        //Problem 12
+        //Problem 12 - Import Customers
         public static string ImportCustomers(CarDealerContext context, string inputJson)
         {
             var customers = JsonConvert
@@ -130,7 +128,7 @@
             return $"Successfully imported {countOfInsertedEntities}.";
         }
 
-        //Problem 13
+        //Problem 13 - Import Sales
         public static string ImportSales(CarDealerContext context, string inputJson)
 
         {
@@ -143,40 +141,144 @@
             return $"Successfully imported {countOfInsertedEntities}.";
         }
 
-        //Problem 14
+        //Problem 14 - Export Ordered Customers
         public static string GetOrderedCustomers(CarDealerContext context)
         {
-            return null;
+            var customers = context.Customers
+                .OrderBy(c => c.BirthDate)
+                .ThenBy(c => c.IsYoungDriver)
+                .Select(c => new
+                {
+                    Name = c.Name,
+                    BirthDate = c.BirthDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    IsYoungDriver = c.IsYoungDriver
+                })
+                .ToList();
+
+            var json = JsonConvert.SerializeObject(customers, Formatting.Indented);
+
+            return json;
         }
 
-        //Problem 15
+        //Problem 15 - Export Cars From Make Toyota
         public static string GetCarsFromMakeToyota(CarDealerContext context)
         {
-            return null;
+            var cars = context.Cars
+                .Where(c => c.Make == "Toyota")
+                .Select(c => new
+                {
+                    Id = c.Id,
+                    Make = c.Make,
+                    Model = c.Model,
+                    TravelledDistance = c.TravelledDistance
+                })
+                .OrderBy(c => c.Model)
+                .ThenByDescending(c => c.TravelledDistance)
+                .ToList();
+
+            var json = JsonConvert.SerializeObject(cars, Formatting.Indented);
+
+            return json;
         }
 
-        //Problem 16
+        //Problem 16 - Export Local Suppliers
         public static string GetLocalSuppliers(CarDealerContext context)
         {
-            return null;
+            var suppliers = context.Suppliers
+                .Where(s => s.IsImporter != true)
+                .Select(s => new
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    PartsCount = s.Parts.Count
+                })
+                .ToList();
+
+            var json = JsonConvert.SerializeObject(suppliers, Formatting.Indented);
+
+            return json;
         }
 
-        //Problem 17
+        //Problem 17 - Export Cars With Their List Of Parts
         public static string GetCarsWithTheirListOfParts(CarDealerContext context)
         {
-            return null;
+            var cars = context.Cars
+                .Select(c => new CarPartsExportDto()
+                {
+                    Car = new CarExportDto()
+                    {
+                        Make = c.Make,
+                        Model = c.Model,
+                        TravelledDistance = c.TravelledDistance
+                    },
+                    Parts = c.PartCars
+                        .Select(pc => new PartExportDto()
+                        {
+                            Name = pc.Part.Name,
+                            Price = $"{pc.Part.Price:F2}"
+                        })
+                        .ToArray()
+                })
+                .ToArray();
+
+            var json = JsonConvert.SerializeObject(cars, Formatting.Indented);
+
+            return json;
         }
 
-        //Problem 18
+        //Problem 18 - Export Total Sales By Customer
         public static string GetTotalSalesByCustomer(CarDealerContext context)
         {
-            return null;
+            var customers = context.Customers
+                .Where(c => c.Sales.Count > 0)
+                .Select(c => new
+                {
+                    FullName = c.Name,
+                    BoughtCars = c.Sales.Count,
+                    SpentMoney = c.Sales.Sum(s => s.Car.PartCars.Sum(pc => pc.Part.Price))
+                })
+                .OrderByDescending(c => c.SpentMoney)
+                .ThenByDescending(c => c.BoughtCars)
+                .ToList();
+
+            JsonSerializerSettings serializerSettings = new JsonSerializerSettings()
+            {
+                Formatting = Formatting.Indented,
+                ContractResolver = new DefaultContractResolver()
+                {
+                    NamingStrategy = new CamelCaseNamingStrategy()
+                }
+            };
+
+            var json = JsonConvert.SerializeObject(customers, serializerSettings);
+
+            return json;
         }
 
-        //Problem 19
+        //Problem 19 - Export Sales With Applied Discount
         public static string GetSalesWithAppliedDiscount(CarDealerContext context)
         {
-            return null;
+            var sales = context.Sales
+                .Select(s => new SalesExportDto
+                {
+                    Car = new CarExportDto
+                    {
+                        Make = s.Car.Make,
+                        Model = s.Car.Model,
+                        TravelledDistance = s.Car.TravelledDistance
+                    },
+                    CustomerName = s.Customer.Name,
+                    Discount = $"{s.Discount:F2}",
+                    Price = $"{s.Car.PartCars.Sum(pc => pc.Part.Price):F2}",
+                    PriceWithDiscount =
+                        $"{s.Car.PartCars.Sum(pc => pc.Part.Price) - s.Car.PartCars.Sum(pc => pc.Part.Price) * (s.Discount / 100m):f2}"
+                })
+                .Take(10)
+                .ToList();
+
+            var json = JsonConvert.SerializeObject(sales, Formatting.Indented);
+
+            return json;
         }
     }
 }
