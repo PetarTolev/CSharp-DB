@@ -9,3 +9,13 @@ C:\Users\Stoyan\Desktop\Car Dealer - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\
 C:\Users\Stoyan\Desktop\Car Dealer - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfo.cs
 C:\Users\Stoyan\Desktop\Car Dealer - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.dll
 C:\Users\Stoyan\Desktop\Car Dealer - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.pdb
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.csprojAssemblyReference.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfo.cs
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.pdb
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.deps.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.runtimeconfig.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.runtimeconfig.dev.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\08. JSON - Exercise\Car Dealer\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.pdb
