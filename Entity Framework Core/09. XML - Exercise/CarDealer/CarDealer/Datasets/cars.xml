@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Cars>
+  <Car>
+    <make>Opel</make>
+    <model>Omega</model>
+    <TravelledDistance>176664996</TravelledDistance>
+    <parts>
+      <partPartIdDto id="38"/>
+      <partPartIdDto id="102"/>
+      <partPartIdDto id="23"/>
+      <partPartIdDto id="116"/>
+      <partPartIdDto id="46"/>
+      <partPartIdDto id="68"/>
+      <partPartIdDto id="88"/>
+      <partPartIdDto id="104"/>
+      <partPartIdDto id="71"/>
+      <partPartIdDto id="32"/>
+      <partPartIdDto id="114"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Astra</model>
+    <TravelledDistance>516628215</TravelledDistance>
+    <parts>
+      <partPartIdDto id="39"/>
+      <partPartIdDto id="62"/>
+      <partPartIdDto id="72"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Astra</model>
+    <TravelledDistance>156191509</TravelledDistance>
+    <parts>
+      <partPartIdDto id="48"/>
+      <partPartIdDto id="44"/>
+      <partPartIdDto id="112"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Corsa</model>
+    <TravelledDistance>347259126</TravelledDistance>
+    <parts>
+      <partPartIdDto id="36"/>
+      <partPartIdDto id="114"/>
+      <partPartIdDto id="88"/>
+      <partPartIdDto id="115"/>
+      <partPartIdDto id="72"/>
+      <partPartIdDto id="11"/>
+      <partPartIdDto id="50"/>
+      <partPartIdDto id="75"/>
+      <partPartIdDto id="20"/>
+      <partPartIdDto id="54"/>
+      <partPartIdDto id="8"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Kadet</model>
+    <TravelledDistance>31737446</TravelledDistance>
+    <parts>
+      <partPartIdDto id="65"/>
+      <partPartIdDto id="95"/>
+      <partPartIdDto id="90"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Vectra</model>
+    <TravelledDistance>238042093</TravelledDistance>
+    <parts>
+      <partPartIdDto id="40"/>
+      <partPartIdDto id="29"/>
+      <partPartIdDto id="102"/>
+      <partPartIdDto id="73"/>
+      <partPartIdDto id="68"/>
+      <partPartIdDto id="7"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Insignia</model>
+    <TravelledDistance>225253817</TravelledDistance>
+    <parts>
+      <partPartIdDto id="108"/>
+      <partPartIdDto id="8"/>
+      <partPartIdDto id="102"/>
+      <partPartIdDto id="57"/>
+      <partPartIdDto id="23"/>
+      <partPartIdDto id="79"/>
+      <partPartIdDto id="103"/>
+      <partPartIdDto id="70"/>
+      <partPartIdDto id="67"/>
+      <partPartIdDto id="71"/>
+      <partPartIdDto id="46"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Astra</model>
+    <TravelledDistance>31468479</TravelledDistance>
+    <parts>
+      <partPartIdDto id="102"/>
+      <partPartIdDto id="54"/>
+      <partPartIdDto id="15"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Corsa</model>
+    <TravelledDistance>282499542</TravelledDistance>
+    <parts>
+      <partPartIdDto id="46"/>
+      <partPartIdDto id="58"/>
+      <partPartIdDto id="12"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Omega</model>
+    <TravelledDistance>111313670</TravelledDistance>
+    <parts>
+      <partPartIdDto id="22"/>
+      <partPartIdDto id="52"/>
+      <partPartIdDto id="59"/>
+      <partPartIdDto id="59"/>
+      <partPartIdDto id="10"/>
+      <partPartIdDto id="112"/>
+      <partPartIdDto id="99"/>
+      <partPartIdDto id="48"/>
+      <partPartIdDto id="8"/>
+      <partPartIdDto id="62"/>
+      <partPartIdDto id="27"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Insignia</model>
+    <TravelledDistance>168539389</TravelledDistance>
+    <parts>
+      <partPartIdDto id="42"/>
+      <partPartIdDto id="96"/>
+      <partPartIdDto id="45"/>
+      <partPartIdDto id="84"/>
+      <partPartIdDto id="66"/>
+      <partPartIdDto id="6"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Vectra</model>
+    <TravelledDistance>433351992</TravelledDistance>
+    <parts>
+      <partPartIdDto id="90"/>
+      <partPartIdDto id="113"/>
+      <partPartIdDto id="98"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Astra</model>
+    <TravelledDistance>349837452</TravelledDistance>
+    <parts>
+      <partPartIdDto id="117"/>
+      <partPartIdDto id="61"/>
+      <partPartIdDto id="78"/>
+      <partPartIdDto id="111"/>
+      <partPartIdDto id="65"/>
+      <partPartIdDto id="93"/>
+      <partPartIdDto id="34"/>
+      <partPartIdDto id="93"/>
+      <partPartIdDto id="108"/>
+      <partPartIdDto id="96"/>
+      <partPartIdDto id="48"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Omega</model>
+    <TravelledDistance>109910837</TravelledDistance>
+    <parts>
+      <partPartIdDto id="12"/>
+      <partPartIdDto id="68"/>
+      <partPartIdDto id="103"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Corsa</model>
+    <TravelledDistance>241891505</TravelledDistance>
+    <parts>
+      <partPartIdDto id="49"/>
+      <partPartIdDto id="107"/>
+      <partPartIdDto id="94"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Insignia</model>
+    <TravelledDistance>339785118</TravelledDistance>
+    <parts>
+      <partPartIdDto id="34"/>
+      <partPartIdDto id="67"/>
+      <partPartIdDto id="99"/>
+      <partPartIdDto id="88"/>
+      <partPartIdDto id="94"/>
+      <partPartIdDto id="100"/>
+      <partPartIdDto id="103"/>
+      <partPartIdDto id="44"/>
+      <partPartIdDto id="113"/>
+      <partPartIdDto id="57"/>
+      <partPartIdDto id="111"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Omega</model>
+    <TravelledDistance>254808828</TravelledDistance>
+    <parts>
+      <partPartIdDto id="47"/>
+      <partPartIdDto id="5"/>
+      <partPartIdDto id="17"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Corsa</model>
+    <TravelledDistance>267253567</TravelledDistance>
+    <parts>
+      <partPartIdDto id="10"/>
+      <partPartIdDto id="19"/>
+      <partPartIdDto id="46"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>Opel</make>
+    <model>Omega</model>
+    <TravelledDistance>277250812</TravelledDistance>
+    <parts>
+      <partPartIdDto id="97"/>
+      <partPartIdDto id="46"/>
+      <partPartIdDto id="59"/>
+      <partPartIdDto id="34"/>
+      <partPartIdDto id="79"/>
+      <partPartIdDto id="2"/>
+      <partPartIdDto id="47"/>
+      <partPartIdDto id="91"/>
+      <partPartIdDto id="25"/>
+      <partPartIdDto id="115"/>
+      <partPartIdDto id="99"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>F20</model>
+    <TravelledDistance>401291910</TravelledDistance>
+    <parts>
+      <partPartIdDto id="100"/>
+      <partPartIdDto id="60"/>
+      <partPartIdDto id="78"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>F25</model>
+    <TravelledDistance>476132712</TravelledDistance>
+    <parts>
+      <partPartIdDto id="82"/>
+      <partPartIdDto id="63"/>
+      <partPartIdDto id="57"/>
+      <partPartIdDto id="58"/>
+      <partPartIdDto id="108"/>
+      <partPartIdDto id="100"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>M5 F10</model>
+    <TravelledDistance>140799461</TravelledDistance>
+    <parts>
+      <partPartIdDto id="96"/>
+      <partPartIdDto id="109"/>
+      <partPartIdDto id="46"/>
+      <partPartIdDto id="61"/>
+      <partPartIdDto id="35"/>
+      <partPartIdDto id="37"/>
+      <partPartIdDto id="4"/>
+      <partPartIdDto id="8"/>
+      <partPartIdDto id="15"/>
+      <partPartIdDto id="72"/>
+      <partPartIdDto id="48"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>F04</model>
+    <TravelledDistance>418839575</TravelledDistance>
+    <parts>
+      <partPartIdDto id="6"/>
+      <partPartIdDto id="79"/>
+      <partPartIdDto id="107"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>E88</model>
+    <TravelledDistance>27453411</TravelledDistance>
+    <parts>
+      <partPartIdDto id="91"/>
+      <partPartIdDto id="88"/>
+      <partPartIdDto id="16"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>M Roadster E85</model>
+    <TravelledDistance>475685374</TravelledDistance>
+    <parts>
+      <partPartIdDto id="28"/>
+      <partPartIdDto id="40"/>
+      <partPartIdDto id="33"/>
+      <partPartIdDto id="20"/>
+      <partPartIdDto id="82"/>
+      <partPartIdDto id="37"/>
+      <partPartIdDto id="71"/>
+      <partPartIdDto id="89"/>
+      <partPartIdDto id="30"/>
+      <partPartIdDto id="22"/>
+      <partPartIdDto id="65"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>1M Coupe</model>
+    <TravelledDistance>39826890</TravelledDistance>
+    <parts>
+      <partPartIdDto id="115"/>
+      <partPartIdDto id="69"/>
+      <partPartIdDto id="33"/>
+      <partPartIdDto id="44"/>
+      <partPartIdDto id="104"/>
+      <partPartIdDto id="4"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>X6 M</model>
+    <TravelledDistance>322292247</TravelledDistance>
+    <parts>
+      <partPartIdDto id="36"/>
+      <partPartIdDto id="74"/>
+      <partPartIdDto id="85"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>E67</model>
+    <TravelledDistance>476830509</TravelledDistance>
+    <parts>
+      <partPartIdDto id="84"/>
+      <partPartIdDto id="84"/>
+      <partPartIdDto id="10"/>
+      <partPartIdDto id="83"/>
+      <partPartIdDto id="7"/>
+      <partPartIdDto id="45"/>
+      <partPartIdDto id="39"/>
+      <partPartIdDto id="35"/>
+      <partPartIdDto id="61"/>
+      <partPartIdDto id="106"/>
+      <partPartIdDto id="38"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>M6 E63</model>
+    <TravelledDistance>57189891</TravelledDistance>
+    <parts>
+      <partPartIdDto id="72"/>
+      <partPartIdDto id="79"/>
+      <partPartIdDto id="15"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>M6 E63</model>
+    <TravelledDistance>69863204</TravelledDistance>
+    <parts>
+      <partPartIdDto id="114"/>
+      <partPartIdDto id="103"/>
+      <partPartIdDto id="44"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>F20</model>
+    <TravelledDistance>487897422</TravelledDistance>
+    <parts>
+      <partPartIdDto id="48"/>
+      <partPartIdDto id="99"/>
+      <partPartIdDto id="41"/>
+      <partPartIdDto id="61"/>
+      <partPartIdDto id="57"/>
+      <partPartIdDto id="91"/>
+      <partPartIdDto id="101"/>
+      <partPartIdDto id="25"/>
+      <partPartIdDto id="95"/>
+      <partPartIdDto id="31"/>
+      <partPartIdDto id="7"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>F04</model>
+    <TravelledDistance>443756363</TravelledDistance>
+    <parts>
+      <partPartIdDto id="89"/>
+      <partPartIdDto id="104"/>
+      <partPartIdDto id="43"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>M5 F10</model>
+    <TravelledDistance>435603343</TravelledDistance>
+    <parts>
+      <partPartIdDto id="40"/>
+      <partPartIdDto id="103"/>
+      <partPartIdDto id="89"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>X6 M</model>
+    <TravelledDistance>227443571</TravelledDistance>
+    <parts>
+      <partPartIdDto id="18"/>
+      <partPartIdDto id="29"/>
+      <partPartIdDto id="116"/>
+      <partPartIdDto id="36"/>
+      <partPartIdDto id="98"/>
+      <partPartIdDto id="5"/>
+      <partPartIdDto id="83"/>
+      <partPartIdDto id="4"/>
+      <partPartIdDto id="114"/>
+      <partPartIdDto id="9"/>
+      <partPartIdDto id="69"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>F20</model>
+    <TravelledDistance>284809463</TravelledDistance>
+    <parts>
+      <partPartIdDto id="78"/>
+      <partPartIdDto id="5"/>
+      <partPartIdDto id="23"/>
+    </parts>
+  </Car>
+  <Car>
+    <make>BMW</make>
+    <model>X6 M</model>
+    <TravelledDistance>183346013</TravelledDistance>
+    <parts>
+      <partPartIdDto id="5"/>
+      <partPartIdDto id="27"/>
+      <partPartIdDto id="29"/>
+      <partPartIdDto id="42"/>
+      <partPartIdDto id="22"/>
+      <partPartIdDto id="2"/>
+    </parts>
+  </Car>
+</Cars>
