@@ -1,0 +1,183 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductsShop.Tests\\ProductsShop.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductShop\\ProductShop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductShop\\ProductShop.csproj",
+        "projectName": "ProductShop",
+        "projectPath": "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductShop\\ProductShop.csproj",
+        "packagesPath": "C:\\Users\\th3dr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductShop\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\th3dr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductsShop.Tests\\ProductsShop.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductsShop.Tests\\ProductsShop.Tests.csproj",
+        "projectName": "ProductsShop.Tests",
+        "projectPath": "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductsShop.Tests\\ProductsShop.Tests.csproj",
+        "packagesPath": "C:\\Users\\th3dr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductsShop.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\th3dr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductShop\\ProductShop.csproj": {
+                "projectPath": "C:\\Users\\th3dr\\Documents\\Projects\\CSharp-DB\\Entity Framework Core\\09. XML - Exercise\\ProductShop\\ProductShop\\ProductShop.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.6.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.15.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
