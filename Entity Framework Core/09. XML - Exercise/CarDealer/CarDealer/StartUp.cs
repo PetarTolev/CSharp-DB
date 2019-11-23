@@ -20,22 +20,22 @@
         {
             using (var context = new CarDealerContext())
             {
-                Mapper.Initialize(x => x.AddProfile<CarDealerProfile>());
+                //Mapper.Initialize(x => x.AddProfile<CarDealerProfile>());
 
                 //context.Database.EnsureDeleted();
                 //context.Database.EnsureCreated();
 
                 #region Files
 
-                var suppliersFile = File.ReadAllText(@"../../../Datasets/suppliers.xml");
-                var carsFile = File.ReadAllText(@"../../../Datasets/cars.xml");
-                var customersFile = File.ReadAllText(@"../../../Datasets/customers.xml");
-                var partsFile = File.ReadAllText(@"../../../Datasets/parts.xml");
-                var salesFile = File.ReadAllText(@"../../../Datasets/sales.xml");
+                //var suppliersFile = File.ReadAllText(@"../../../Datasets/suppliers.xml");
+                //var carsFile = File.ReadAllText(@"../../../Datasets/cars.xml");
+                //var customersFile = File.ReadAllText(@"../../../Datasets/customers.xml");
+                //var partsFile = File.ReadAllText(@"../../../Datasets/parts.xml");
+                //var salesFile = File.ReadAllText(@"../../../Datasets/sales.xml");
 
                 #endregion
 
-                Console.WriteLine(GetCarsWithDistance(context));
+                Console.WriteLine(GetSalesWithAppliedDiscount(context));
             }
         }
 
@@ -148,19 +148,23 @@
         public static string GetCarsWithDistance(CarDealerContext context)
         {
             var cars = context.Cars
-                .Where(c => c.TravelledDistance > 2000000)
+                .Where(c => c.TravelledDistance > (long)2000000)
+                .Select(c => new ExportCarWithDistanceDto
+                {
+                    Make = c.Make,
+                    Model = c.Model,
+                    TravelledDistance = c.TravelledDistance
+                })
                 .OrderBy(c => c.Make)
                 .ThenBy(c => c.Model)
                 .Take(10)
-                .ProjectTo<ExportCarWithDistanceDto>()
                 .ToArray();
 
             XmlSerializer serializer = new XmlSerializer(typeof(ExportCarWithDistanceDto[]),
                 new XmlRootAttribute("cars"));
 
             var sb = new StringBuilder();
-            var namespaces = new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty });
-            serializer.Serialize(new StringWriter(sb), cars, namespaces);
+            serializer.Serialize(new StringWriter(sb), cars, new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty }));
 
             return sb.ToString().TrimEnd();
         }
