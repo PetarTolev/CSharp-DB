@@ -14,7 +14,7 @@
         [XmlElement("quantity")]
         public int Quantity { get; set; }
 
-        [XmlElement("supplierPartIdDto")]
+        [XmlElement("supplierId")]
         public int SupplierId { get; set; }
     }
 }

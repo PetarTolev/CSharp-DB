@@ -2,10 +2,10 @@
 {
     using AutoMapper;
     using AutoMapper.QueryableExtensions;
-    using Dtos.Export;
-    using Data;
     using Dtos.Import;
     using Models;
+    using Data;
+    using Dtos.Export;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -22,8 +22,8 @@
             {
                 Mapper.Initialize(x => x.AddProfile<CarDealerProfile>());
 
-                context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+                //context.Database.EnsureDeleted();
+                //context.Database.EnsureCreated();
 
                 #region Files
 
@@ -34,12 +34,6 @@
                 var salesFile = File.ReadAllText(@"../../../Datasets/sales.xml");
 
                 #endregion
-
-                Console.WriteLine("Suppliers" + ImportSuppliers(context, suppliersFile));
-                Console.WriteLine("Parts" + ImportParts(context, partsFile));
-                Console.WriteLine("Cars" + ImportCars(context, carsFile));
-                Console.WriteLine("Customers" + ImportCustomers(context, customersFile));
-                Console.WriteLine("Sales" + ImportSales(context, salesFile));
 
                 Console.WriteLine(GetCarsWithDistance(context));
             }
@@ -136,14 +130,13 @@
         //Problem 13 - Import Sales
         public static string ImportSales(CarDealerContext context, string inputXml)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(ImportSaleDto[]),
-                new XmlRootAttribute("Sales"));
+            var xmlSerializer = new XmlSerializer(typeof(ImportSaleDto[]), new XmlRootAttribute("Sales"));
+            var salesDto = (ImportSaleDto[])xmlSerializer.Deserialize(new StringReader(inputXml));
 
-            var saleDtos = (ImportSaleDto[])serializer.Deserialize(new StringReader(inputXml));
-            var sales = Mapper.Map<IEnumerable<ImportSaleDto>, IEnumerable<Sale>>(saleDtos);
+            var sales = Mapper.Map<IEnumerable<ImportSaleDto>, IEnumerable<Sale>>(salesDto);
 
-            var carIds = context.Cars.Select(c => c.Id);
-            var validSales = sales.Where(s => carIds.Contains(s.CarId));
+            var carIds = context.Cars.Select(c => c.Id).ToArray();
+            var validSales = sales.Where(s => carIds.Contains(s.CarId)).ToArray();
 
             context.Sales.AddRange(validSales);
             var countOfAddedEntities = context.SaveChanges();
@@ -197,7 +190,12 @@
         {
             var suppliers = context.Suppliers
                 .Where(s => s.IsImporter == false)
-                .ProjectTo<ExportLocalSuppliersDto>()
+                .Select(s => new ExportLocalSuppliersDto
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    PartsCount = s.Parts.Count
+                })
                 .ToArray();
 
             XmlSerializer serializer = new XmlSerializer(typeof(ExportLocalSuppliersDto[]),

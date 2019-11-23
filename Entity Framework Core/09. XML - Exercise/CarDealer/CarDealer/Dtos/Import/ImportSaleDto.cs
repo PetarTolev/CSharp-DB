@@ -5,10 +5,10 @@
     [XmlType("Sale")]
     public class ImportSaleDto
     {
-        [XmlElement("carPartIdDto")]
+        [XmlElement("carId")]
         public int CarId { get; set; }
 
-        [XmlElement("customerPartIdDto")]
+        [XmlElement("customerId")]
         public int CustomerId { get; set; }
 
         [XmlElement("discount")]
