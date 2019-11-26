@@ -2,7 +2,7 @@
 {
     using System.Xml.Serialization;
 
-    [XmlType("Car")]
+    [XmlType("car")]
     public class ExportCarWithDistanceDto
     {
         [XmlElement("make")]

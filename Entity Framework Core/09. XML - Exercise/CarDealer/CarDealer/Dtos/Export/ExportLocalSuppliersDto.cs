@@ -2,7 +2,7 @@
 {
     using System.Xml.Serialization;
 
-    [XmlType("Supplier")]
+    [XmlType("suplier")]
     public class ExportLocalSuppliersDto
     {
         [XmlAttribute("id")]
