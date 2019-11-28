@@ -13,6 +13,7 @@
         public SoftJailProfile()
         {
             this.CreateMap<DepartmentImportDto, Department>();
+
             this.CreateMap<PrisonerImportDto, Prisoner>()
                 .ForMember(p => p.IncarcerationDate, y => y.MapFrom(
                     pi => DateTime.ParseExact(pi.IncarcerationDate, "dd/MM/yyyy", CultureInfo.InvariantCulture)))

@@ -14,7 +14,6 @@
     using System.Text;
     using System.Xml.Serialization;
 
-
     public class Deserializer
     {
         private const string ErrorMessage = "Invalid Data";
