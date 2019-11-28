@@ -10,6 +10,7 @@
 		public VaporStoreProfile()
         {
             this.CreateMap<GameImportDto, Game>();
+
             this.CreateMap<Game, GameImportDto>();
         }
 	}

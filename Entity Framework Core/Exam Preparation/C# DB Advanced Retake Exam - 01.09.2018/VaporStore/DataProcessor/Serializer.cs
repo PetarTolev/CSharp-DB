@@ -1,18 +1,16 @@
-﻿using System.Globalization;
-using System.IO;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
-using VaporStore.Data.Models.Enums;
-using VaporStore.DataProcessor.Dto.Export;
-
-namespace VaporStore.DataProcessor
+﻿namespace VaporStore.DataProcessor
 {
     using Data;
-    using System;
+    using Data.Models.Enums;
+    using Dto.Export;
     using Newtonsoft.Json;
+    using System;
+    using System.Globalization;
+    using System.IO;
     using System.Linq;
+    using System.Text;
+    using System.Xml;
+    using System.Xml.Serialization;
 
     public static class Serializer
 	{
@@ -42,7 +40,7 @@ namespace VaporStore.DataProcessor
                 })
                 .ToArray();
 
-            var json = JsonConvert.SerializeObject(games, Formatting.Indented);
+            var json = JsonConvert.SerializeObject(games, Newtonsoft.Json.Formatting.Indented);
 
             return json;
         }
