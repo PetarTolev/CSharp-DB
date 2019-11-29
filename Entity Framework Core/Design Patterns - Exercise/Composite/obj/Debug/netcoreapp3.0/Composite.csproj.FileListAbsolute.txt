@@ -1,0 +1,11 @@
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\bin\Debug\netcoreapp3.0\Composite.exe
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\bin\Debug\netcoreapp3.0\Composite.deps.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\bin\Debug\netcoreapp3.0\Composite.runtimeconfig.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\bin\Debug\netcoreapp3.0\Composite.runtimeconfig.dev.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\bin\Debug\netcoreapp3.0\Composite.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\bin\Debug\netcoreapp3.0\Composite.pdb
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\obj\Debug\netcoreapp3.0\Composite.csprojAssemblyReference.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\obj\Debug\netcoreapp3.0\Composite.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\obj\Debug\netcoreapp3.0\Composite.AssemblyInfo.cs
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\obj\Debug\netcoreapp3.0\Composite.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Composite\obj\Debug\netcoreapp3.0\Composite.pdb

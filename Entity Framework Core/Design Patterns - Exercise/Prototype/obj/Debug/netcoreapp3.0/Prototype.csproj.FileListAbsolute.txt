@@ -1,0 +1,11 @@
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\bin\Debug\netcoreapp3.0\Prototype.exe
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\bin\Debug\netcoreapp3.0\Prototype.deps.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\bin\Debug\netcoreapp3.0\Prototype.runtimeconfig.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\bin\Debug\netcoreapp3.0\Prototype.runtimeconfig.dev.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\bin\Debug\netcoreapp3.0\Prototype.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\bin\Debug\netcoreapp3.0\Prototype.pdb
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\obj\Debug\netcoreapp3.0\Prototype.csprojAssemblyReference.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\obj\Debug\netcoreapp3.0\Prototype.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\obj\Debug\netcoreapp3.0\Prototype.AssemblyInfo.cs
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\obj\Debug\netcoreapp3.0\Prototype.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Exercise\Prototype\obj\Debug\netcoreapp3.0\Prototype.pdb

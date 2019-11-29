@@ -1,0 +1,11 @@
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\bin\Debug\netcoreapp3.0\01. Singleton.exe
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\bin\Debug\netcoreapp3.0\01. Singleton.deps.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\bin\Debug\netcoreapp3.0\01. Singleton.runtimeconfig.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\bin\Debug\netcoreapp3.0\01. Singleton.runtimeconfig.dev.json
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\bin\Debug\netcoreapp3.0\01. Singleton.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\bin\Debug\netcoreapp3.0\01. Singleton.pdb
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\obj\Debug\netcoreapp3.0\01. Singleton.csprojAssemblyReference.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\obj\Debug\netcoreapp3.0\01. Singleton.AssemblyInfoInputs.cache
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\obj\Debug\netcoreapp3.0\01. Singleton.AssemblyInfo.cs
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\obj\Debug\netcoreapp3.0\01. Singleton.dll
+C:\Users\th3dr\Documents\Projects\CSharp-DB\Entity Framework Core\Design Patterns - Lab\01. Singleton\obj\Debug\netcoreapp3.0\01. Singleton.pdb
