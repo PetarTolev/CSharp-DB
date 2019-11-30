@@ -2,6 +2,9 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using Validations;
+    using static Validations.DataValidation;
+    using static Validations.DataValidation.Customer;
 
     public class Customer
     {
@@ -9,19 +12,19 @@
         public int Id { get; set; }
 
         [Required]
-        [MinLength(3), MaxLength(20)]
+        [MinLength(DataValidation.Customer.NameMinLength), MaxLength(DataValidation.Customer.NameMaxLength)]
         public string FirstName { get; set; }
         
         [Required]
-        [MinLength(3), MaxLength(20)]
+        [MinLength(DataValidation.Customer.NameMinLength), MaxLength(DataValidation.Customer.NameMaxLength)]
         public string LastName { get; set; }
         
         [Required]
-        [Range(12, 110)]
+        [Range(AgeMin, AgeMax)]
         public int Age { get; set; }
         
         [Required]
-        [Range(0.01, double.MaxValue)]
+        [Range(MoneyMin, MoneyMax)]
         public decimal Balance { get; set; }
 
         public ICollection<Ticket> Tickets { get; set; } = new HashSet<Ticket>();

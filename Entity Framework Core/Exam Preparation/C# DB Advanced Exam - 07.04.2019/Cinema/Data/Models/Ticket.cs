@@ -1,6 +1,7 @@
 ﻿namespace Cinema.Data.Models
 {
     using System.ComponentModel.DataAnnotations;
+    using static Validations.DataValidation;
 
     public class Ticket
     {
@@ -8,7 +9,7 @@
         public int Id { get; set; }
 
         [Required]
-        [Range(0.01, double.MaxValue)]
+        [Range(MoneyMin, MoneyMax)]
         public decimal Price { get; set; }
         
         [Required]

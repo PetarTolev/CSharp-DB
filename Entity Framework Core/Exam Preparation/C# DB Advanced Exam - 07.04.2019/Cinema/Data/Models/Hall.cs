@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using static Validations.DataValidation;
 
     public class Hall
     {
@@ -9,7 +10,7 @@
         public int Id { get; set; }
 
         [Required]
-        [MinLength(3), MaxLength(20)]
+        [MinLength(NameMinLength), MaxLength(NameMaxLength)]
         public string Name { get; set; }
 
         public bool Is4Dx { get; set; }

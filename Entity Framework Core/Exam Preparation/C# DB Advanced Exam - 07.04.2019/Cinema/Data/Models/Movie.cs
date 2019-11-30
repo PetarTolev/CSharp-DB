@@ -4,6 +4,8 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using static Validations.DataValidation;
+    using static Validations.DataValidation.Movie;
 
     public class Movie
     {
@@ -11,7 +13,7 @@
         public int Id { get; set; }
 
         [Required]
-        [MinLength(3), MaxLength(20)]
+        [MinLength(TitleMinLength), MaxLength(TitleMaxLength)]
         public string Title { get; set; }
         
         [Required]
@@ -21,11 +23,11 @@
         public TimeSpan Duration { get; set; }
         
         [Required]
-        [Range(1, 10)]
+        [Range(RatingMin, RatingMax)]
         public double Rating { get; set; }
         
         [Required]
-        [MinLength(3), MaxLength(20)]
+        [MinLength(NameMinLength), MaxLength(NameMaxLength)]
         public string Director { get; set; }
 
         public ICollection<Projection> Projections { get; set; } = new HashSet<Projection>();
