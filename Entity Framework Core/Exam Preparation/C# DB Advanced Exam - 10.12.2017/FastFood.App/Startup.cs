@@ -1,10 +1,10 @@
-﻿using AutoMapper;
-using FastFood.Data;
-using System;
-using System.IO;
-
-namespace FastFood.App
+﻿namespace FastFood.App
 {
+    using AutoMapper;
+    using Data;
+    using System;
+    using System.IO;
+
     public class Startup
 	{
 		public static void Main(string[] args)

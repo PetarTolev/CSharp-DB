@@ -5,7 +5,6 @@
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
     public class Order
     {
@@ -21,10 +20,8 @@
         [Required]
         public OrderType Type { get; set; }
 
-        [Required]
         [NotMapped]
-        public decimal TotalPrice
-            => this.OrderItems.Sum(oi => oi.Item.Price);
+        public decimal TotalPrice { get; set; }
         
         [Required]
         public int EmployeeId { get; set; }

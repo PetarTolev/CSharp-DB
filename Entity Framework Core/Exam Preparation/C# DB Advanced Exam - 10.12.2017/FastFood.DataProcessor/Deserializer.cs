@@ -1,22 +1,20 @@
-﻿using System;
-using FastFood.Data;
-using FastFood.DataProcessor.Dto.Import;
-using FastFood.Models;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
-using FastFood.Models.Enums;
-using Remotion.Linq.Clauses.ResultOperators;
-using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
-
-namespace FastFood.DataProcessor
+﻿namespace FastFood.DataProcessor
 {
+    using Data;
+    using Dto.Import;
+    using Models;
+    using Models.Enums;
+    using Newtonsoft.Json;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Xml.Serialization;
+    using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
+
     public static class Deserializer
 	{
 		private const string FailureMessage = "Invalid data format.";

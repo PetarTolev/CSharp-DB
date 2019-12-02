@@ -14,8 +14,4 @@
     <ProjectReference Include="..\FastFood.Models\FastFood.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dto\Export\" />
-  </ItemGroup>
-
 </Project>
