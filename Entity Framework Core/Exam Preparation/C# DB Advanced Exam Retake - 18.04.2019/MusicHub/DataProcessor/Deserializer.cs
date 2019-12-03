@@ -1,20 +1,22 @@
-﻿using System.IO;
-using System.Security.Claims;
-using System.Threading.Tasks.Sources;
-using System.Xml.Serialization;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore.Internal;
+using MusicHub.Data.Models;
 using MusicHub.Data.Models.Enums;
+using MusicHub.DataProcessor.ImportDtos;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Xml.Serialization;
+using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
 
 namespace MusicHub.DataProcessor
 {
     using Data;
-    using Data.Models;
-    using ImportDtos;
-    using Newtonsoft.Json;
     using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Text;
 
     public class Deserializer
     {
@@ -33,8 +35,7 @@ namespace MusicHub.DataProcessor
 
         public static string ImportWriters(MusicHubDbContext context, string jsonString)
         {
-            var writersDto = JsonConvert.DeserializeObject<ImportWriterDto[]>(jsonString)
-                .ToArray();
+            var writersDto = JsonConvert.DeserializeObject<ImportDtos.WriterDto[]>(jsonString).ToArray();
             var validWriters = new List<Writer>();
 
             var sb = new StringBuilder();
@@ -47,22 +48,25 @@ namespace MusicHub.DataProcessor
                     continue;
                 }
 
-                var writer = AutoMapper.Mapper.Map<Writer>(writerDto);
-                validWriters.Add(writer);
+                var writer = new Writer
+                {
+                    Name = writerDto.Name,
+                    Pseudonym = writerDto.Pseudonym
+                };
 
                 sb.AppendLine(string.Format(SuccessfullyImportedWriter, writer.Name));
+                validWriters.Add(writer);
             }
 
-	        context.Writers.AddRange(validWriters);
-	        context.SaveChanges();
+            context.Writers.AddRange(validWriters);
+            context.SaveChanges();
 
             return sb.ToString().TrimEnd();
         }
 
         public static string ImportProducersAlbums(MusicHubDbContext context, string jsonString)
         {
-            var producersDto = JsonConvert.DeserializeObject<ImportProducerDto[]>(jsonString)
-                .ToArray();
+            var producersDto = JsonConvert.DeserializeObject<ImportDtos.ProducerDto[]>(jsonString).ToArray();
             var validProducers = new List<Producer>();
 
             var sb = new StringBuilder();
@@ -75,105 +79,119 @@ namespace MusicHub.DataProcessor
                     continue;
                 }
 
-                var producer = AutoMapper.Mapper.Map<Producer>(producerDto);
-                validProducers.Add(producer);
+                var albums = Mapper.Map<Album[]>(producerDto.Albums);
+
+                var producer = new Producer
+                {
+                    Name = producerDto.Name,
+                    Pseudonym = producerDto.Pseudonym,
+                    PhoneNumber = producerDto.PhoneNumber,
+                    Albums = albums
+                };
 
                 if (producer.PhoneNumber == null)
                 {
-                    sb.AppendLine(
-                        string.Format(SuccessfullyImportedProducerWithNoPhone, producer.Name, producer.Albums.Count()));
+                    sb.AppendLine(string.Format(SuccessfullyImportedProducerWithNoPhone, producer.Name,
+                        producer.Albums.Count));
                 }
                 else
                 {
                     sb.AppendLine(string.Format(SuccessfullyImportedProducerWithPhone, producer.Name,
-                        producer.PhoneNumber, producer.Albums.Count()));
+                        producer.PhoneNumber, producer.Albums.Count));
                 }
+
+                validProducers.Add(producer);
             }
 
-            context.AddRange(validProducers);
+            context.Producers.AddRange(validProducers);
             context.SaveChanges();
 
             return sb.ToString().TrimEnd();
         }
 
         public static string ImportSongs(MusicHubDbContext context, string xmlString)
+        {	
+            var serializer = new XmlSerializer(typeof(SongDto[]),
+                new XmlRootAttribute("Songs"));
+
+            var songsDto = (SongDto[]) serializer.Deserialize(new StringReader(xmlString));
+
+            var validSongs = new List<Song>();
+
+            var sb = new StringBuilder();
+
+            foreach (var songDto in songsDto)
             {
-                var xmlSerializer = new XmlSerializer(typeof(ImportSongDto[]),
-                    new XmlRootAttribute("Songs"));
-                var songsDto = (ImportSongDto[])xmlSerializer.Deserialize(new StringReader(xmlString));
+                var validGenre = Enum.IsDefined(typeof(Genre), songDto.Genre);
+                var writersId = context.Writers.Select(w => w.Id);
+                var validWriter = writersId.Contains(songDto.WriterId);
 
-                var sb = new StringBuilder();
-                var validSongs = new List<Song>();
+                var albumsId = context.Albums.Select(a => a.Id);
+                var validAlbum = albumsId.Contains(songDto.AlbumId.Value);
 
-                foreach (var songDto in songsDto)
+                if (!IsValid(songDto) || !validGenre || !validWriter || !validAlbum)
                 {
-                    if (!IsValid(songDto))
-                    {
-                        sb.AppendLine(ErrorMessage);
-                        continue;
-                    }
-
-                    var genre = Enum.TryParse(songDto.Genre, out Genre genreResult);
-                    var album = context.Albums.Find(songDto.AlbumId);
-                    var writer = context.Writers.Find(songDto.WriterId);
-                    var songTitle = validSongs.Any(s => s.Name == songDto.Name);
-
-                    if (!genre || album == null || writer == null || songTitle)
-                    {
-                        sb.AppendLine(ErrorMessage);
-                        continue;
-                    }
-
-                    var song = AutoMapper.Mapper.Map<Song>(songDto);
-
-                    validSongs.Add(song);
-                    sb.AppendLine(string.Format(SuccessfullyImportedSong, song.Name, song.Genre, song.Duration));
+                    sb.AppendLine(ErrorMessage);
+                    continue;
                 }
 
-                context.Songs.AddRange(validSongs);
-                context.SaveChanges();
+                var song = new Song
+                {
+                    Name = songDto.Name,
+                    Duration = TimeSpan.ParseExact(songDto.Duration, @"c", CultureInfo.InvariantCulture),
+                    CreatedOn = DateTime.ParseExact(songDto.CreatedOn, @"dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    Genre = Enum.Parse<Genre>(songDto.Genre),
+                    AlbumId = songDto.AlbumId,
+                    WriterId = songDto.WriterId,
+                    Price = songDto.Price
+                };
 
-                return sb.ToString().TrimEnd();
+                sb.AppendLine(string.Format(SuccessfullyImportedSong, song.Name, song.Genre.ToString(),
+                    song.Duration.ToString("c")));
+
+                validSongs.Add(song);
             }
+	
+            context.Songs.AddRange(validSongs);
+            context.SaveChanges();
+
+            return sb.ToString().TrimEnd();
+        }
 
         public static string ImportSongPerformers(MusicHubDbContext context, string xmlString)
         {
-            var xmlSerializer = new XmlSerializer(typeof(ImportPerformerDto[]),
+            var serializer = new XmlSerializer(typeof(PerformerDto[]),
                 new XmlRootAttribute("Performers"));
-            var performerDtos = (ImportPerformerDto[])xmlSerializer.Deserialize(new StringReader(xmlString));
+
+            var performersDto = (PerformerDto[]) serializer.Deserialize(new StringReader(xmlString));
 
             var validPerformers = new List<Performer>();
+
             var sb = new StringBuilder();
 
-            foreach (var performerDto in performerDtos)
+            foreach (var performerDto in performersDto)
             {
-                if (!IsValid(performerDto))
-                {
-                    sb.AppendLine(ErrorMessage);
-                    continue;
-                }
-
                 var validSongsCount = context.Songs.Count(s => performerDto.PerformerSongs.Any(i => i.Id == s.Id));
+                var isValidSongs = performerDto.PerformerSongs.Length == validSongsCount;
 
-                if (validSongsCount != performerDto.PerformerSongs.Length)
+                if (!IsValid(performerDto) || !isValidSongs)
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
                 }
 
-                var performer = AutoMapper.Mapper.Map<Performer>(performerDto);
+                var performer = Mapper.Map<Performer>(performerDto);
+
+                sb.AppendLine(string.Format(SuccessfullyImportedPerformer, performer.FirstName,
+                    performer.PerformerSongs.Count));
 
                 validPerformers.Add(performer);
-                sb.AppendLine(string.Format(SuccessfullyImportedPerformer, performer.FirstName,
-                    performer.PerformerSongs.Count()));
             }
 
             context.Performers.AddRange(validPerformers);
             context.SaveChanges();
 
-            var result = sb.ToString().TrimEnd();
-
-            return result;
+            return sb.ToString().TrimEnd();
         }
 
         private static bool IsValid(object entity)

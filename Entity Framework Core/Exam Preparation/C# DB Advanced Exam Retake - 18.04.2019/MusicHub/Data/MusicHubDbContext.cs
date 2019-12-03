@@ -2,22 +2,10 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Models;
-    using Configurations;
+    using Models.Configurations;
 
     public class MusicHubDbContext : DbContext
     {
-        public DbSet<Album> Albums { get; set; }
-
-        public DbSet<Performer> Performers { get; set; }
-
-        public DbSet<Producer> Producers { get; set; }
-
-        public DbSet<Song> Songs { get; set; }
-
-        public DbSet<SongPerformer> SongsPerformers { get; set; }
-
-        public DbSet<Writer> Writers { get; set; }
-
         public MusicHubDbContext()
         {
         }
@@ -26,6 +14,18 @@
             : base(options)
         {
         }
+
+        public DbSet<Album> Albums { get; set; }
+
+        public DbSet<Performer> Performers { get; set; }
+
+        public DbSet<Producer> Producers { get; set; }
+
+        public DbSet<Song> Songs { get; set; }
+
+        public DbSet<SongPerformer> SongPerformers { get; set; }
+
+        public DbSet<Writer> Writers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -40,8 +40,8 @@
         {
             base.OnModelCreating(builder);
 
-            builder.ApplyConfiguration(new AlbumConfiguration());
             builder.ApplyConfiguration(new SongConfiguration());
+            builder.ApplyConfiguration(new AlbumConfiguration());
             builder.ApplyConfiguration(new SongPerformerConfiguration());
         }
     }

@@ -1,10 +1,12 @@
 ﻿namespace MusicHub
 {
-    using AutoMapper;
-    using Data;
-    using Microsoft.EntityFrameworkCore;
     using System;
     using System.IO;
+
+    using AutoMapper;
+    using Microsoft.EntityFrameworkCore;
+   
+    using Data;
 
     public class StartUp
     {
@@ -19,7 +21,7 @@
             var projectDir = GetProjectDirectory();
             
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
-            //ExportEntities(context, projectDir + @"ExportResults/");
+            ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
             {
@@ -37,7 +39,7 @@
                     File.ReadAllText(baseDir + "ImportProducersAlbums.json"));
             PrintAndExportEntityToFile(producerAlbums, exportDir + "ImportProducersAlbums.txt");
 
-            var songs = DataProcessor.Deserializer.ImportSongs(context, 
+            var songs = DataProcessor.Deserializer.ImportSongs(context,
                 File.ReadAllText(baseDir + "ImportSongs.xml"));
             PrintAndExportEntityToFile(songs, exportDir + "ImportSongs.txt");
 

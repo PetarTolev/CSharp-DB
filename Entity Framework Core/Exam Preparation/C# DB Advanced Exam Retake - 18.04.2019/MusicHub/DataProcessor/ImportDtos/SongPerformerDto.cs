@@ -3,7 +3,7 @@
     using System.Xml.Serialization;
 
     [XmlType("Song")]
-    public class ImportPerformerSongDto
+    public class SongPerformerDto
     {
         [XmlAttribute("id")]
         public int Id { get; set; }

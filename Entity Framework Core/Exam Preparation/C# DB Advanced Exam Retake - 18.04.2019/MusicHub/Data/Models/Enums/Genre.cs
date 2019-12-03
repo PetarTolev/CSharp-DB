@@ -2,10 +2,10 @@
 {
     public enum Genre
     {
-        Blues,
+        Blues, 
         Rap,
-        PopMusic,
-        Rock,
+        PopMusic, 
+        Rock, 
         Jazz
     }
 }

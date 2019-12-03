@@ -4,12 +4,12 @@
 
     public class SongPerformer
     {
-        public int SongId { get; set; }
         [Required]
+        public int SongId { get; set; } //todo: not sure for required
         public Song Song { get; set; }
-
-        public int PerformerId { get; set; }
+        
         [Required]
+        public int PerformerId { get; set; }
         public Performer Performer { get; set; }
     }
 }

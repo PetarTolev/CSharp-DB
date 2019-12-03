@@ -2,14 +2,13 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class ImportAlbumDto
+    public class AlbumDto
     {
         [Required]
         [MinLength(3), MaxLength(40)]
         public string Name { get; set; }
-
+        
         [Required]
-        [RegularExpression(@"\d{2}\/\d{2}\/\d{4}")]
         public string ReleaseDate { get; set; }
     }
 }

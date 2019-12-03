@@ -4,23 +4,28 @@
     using System.Xml.Serialization;
 
     [XmlType("Song")]
-    public class ImportSongDto
+    public class SongDto
     {
         [Required]
         [MinLength(3), MaxLength(20)]
         public string Name { get; set; }
-
+        
+        [Required]
         public string Duration { get; set; }
-
+        
+        [Required]
         public string CreatedOn { get; set; }
 
+        [Required]
         public string Genre { get; set; }
 
         public int? AlbumId { get; set; }
 
+        [Required]
         public int WriterId { get; set; }
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335")]
+        [Required]
+        [Range(0, double.MaxValue)]
         public decimal Price { get; set; }
     }
 }

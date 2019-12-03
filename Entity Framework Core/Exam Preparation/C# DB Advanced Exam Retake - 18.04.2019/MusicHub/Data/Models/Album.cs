@@ -8,28 +8,22 @@
 
     public class Album
     {
-        public Album()
-        {
-            this.Songs = new HashSet<Song>();
-        }
-
-        [Key]
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
 
         [Required]
-        [StringLength(40, MinimumLength = 3)]
+        [MinLength(3), MaxLength(40)]
         public string Name { get; set; }
 
         [Required]
         public DateTime ReleaseDate { get; set; }
 
         [NotMapped]
-        public decimal Price 
-            => this.Songs.Sum(p => p.Price);
+        public decimal Price // todo: not sure for sum
+            => this.Songs.Sum(s => s.Price);
 
-        public int? ProducerId { get; set; }
+        public int? ProducerId { get; set; } //todo: not sure for nullable
         public Producer Producer { get; set; }
 
-        public IEnumerable<Song> Songs { get; set; }    
+        public ICollection<Song> Songs { get; set; } = new HashSet<Song>();
     }
 }

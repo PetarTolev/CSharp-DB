@@ -4,23 +4,25 @@
     using System.Xml.Serialization;
 
     [XmlType("Performer")]
-    public class ImportPerformerDto
+    public class PerformerDto
     {
         [Required]
         [MinLength(3), MaxLength(20)]
         public string FirstName { get; set; }
-
+        
         [Required]
         [MinLength(3), MaxLength(20)]
         public string LastName { get; set; }
-
+        
+        [Required]
         [Range(18, 70)]
         public int Age { get; set; }
 
-        [Range(typeof(decimal), "0", "79228162514264337593543950335")]
+        [Required]
+        [Range(0, double.MaxValue)]
         public decimal NetWorth { get; set; }
 
         [XmlArray("PerformersSongs")]
-        public ImportPerformerSongDto[] PerformerSongs { get; set; }
+        public SongPerformerDto[] PerformerSongs { get; set; }
     }
 }
