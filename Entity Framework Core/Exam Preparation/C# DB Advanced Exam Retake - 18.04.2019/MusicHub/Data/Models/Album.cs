@@ -18,10 +18,10 @@
         public DateTime ReleaseDate { get; set; }
 
         [NotMapped]
-        public decimal Price // todo: not sure for sum
+        public decimal Price
             => this.Songs.Sum(s => s.Price);
 
-        public int? ProducerId { get; set; } //todo: not sure for nullable
+        public int? ProducerId { get; set; }
         public Producer Producer { get; set; }
 
         public ICollection<Song> Songs { get; set; } = new HashSet<Song>();

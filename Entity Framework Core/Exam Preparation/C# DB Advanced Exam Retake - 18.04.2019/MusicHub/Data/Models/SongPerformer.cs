@@ -5,7 +5,7 @@
     public class SongPerformer
     {
         [Required]
-        public int SongId { get; set; } //todo: not sure for required
+        public int SongId { get; set; }
         public Song Song { get; set; }
         
         [Required]

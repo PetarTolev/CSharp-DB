@@ -23,7 +23,7 @@
         [Required]
         public Genre Genre { get; set; }
 
-        public int? AlbumId { get; set; } //todo: not sure for nullable
+        public int? AlbumId { get; set; }
         public Album Album { get; set; }
         
         [Required]
