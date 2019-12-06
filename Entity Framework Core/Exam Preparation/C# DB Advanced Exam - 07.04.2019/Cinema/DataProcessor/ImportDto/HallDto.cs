@@ -1,6 +1,6 @@
 ﻿namespace Cinema.DataProcessor.ImportDto
 {
-    public class HallImportDto
+    public class HallDto
     {
         public string Name { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace Cinema.Data
 {
-    using Cinema.Data.Models.Configuration;
+    using Models.Configuration;
     using Microsoft.EntityFrameworkCore;
     using Models;
 

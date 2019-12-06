@@ -3,7 +3,7 @@
     using System.Xml.Serialization;
 
     [XmlType("Projection")]
-    public class ProjectionImportDto
+    public class ProjectionDto
     {
         [XmlElement("MovieId")]
         public int MovieId { get; set; }

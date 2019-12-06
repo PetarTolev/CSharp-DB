@@ -3,7 +3,7 @@
     using System.Xml.Serialization;
 
     [XmlType("Customer")]
-    public class CustomerImportDto
+    public class CustomerDto
     {
         [XmlElement("FirstName")]
         public string FirstName { get; set; }
@@ -12,12 +12,12 @@
         public string LastName { get; set; }
         
         [XmlElement("Age")]
-        public int Age { get; set; }
+        public string Age { get; set; }
         
         [XmlElement("Balance")]
-        public decimal Balance { get; set; }
+        public double Balance { get; set; }
 
         [XmlArray("Tickets")]
-        public TicketImportDto[] Tickets { get; set; }
+        public TicketDto[] Tickets { get; set; }
     }
 }
