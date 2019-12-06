@@ -1,17 +1,14 @@
-﻿using MusicHub.DataProcessor.ExportDtos;
-using Newtonsoft.Json;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
-using Formatting = Newtonsoft.Json.Formatting;
-
-namespace MusicHub.DataProcessor
+﻿namespace MusicHub.DataProcessor
 {
-
     using Data;
+    using ExportDtos;
+    using Newtonsoft.Json;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Xml;
+    using System.Xml.Serialization;
 
     public class Serializer
     {
@@ -40,7 +37,7 @@ namespace MusicHub.DataProcessor
                 .OrderByDescending(a => decimal.Parse(a.AlbumPrice))
                 .ToArray();
 
-            var json = JsonConvert.SerializeObject(albums, Formatting.Indented);
+            var json = JsonConvert.SerializeObject(albums, Newtonsoft.Json.Formatting.Indented);
             return json;
         }
 

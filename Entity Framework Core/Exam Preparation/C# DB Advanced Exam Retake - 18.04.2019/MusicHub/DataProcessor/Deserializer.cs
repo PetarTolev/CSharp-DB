@@ -1,22 +1,19 @@
-﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore.Internal;
-using MusicHub.Data.Models;
-using MusicHub.Data.Models.Enums;
-using MusicHub.DataProcessor.ImportDtos;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
-using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
-
-namespace MusicHub.DataProcessor
+﻿namespace MusicHub.DataProcessor
 {
+    using AutoMapper;
     using Data;
+    using Data.Models;
+    using Data.Models.Enums;
+    using ImportDtos;
+    using Newtonsoft.Json;
     using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Xml.Serialization;
 
     public class Deserializer
     {
@@ -35,24 +32,20 @@ namespace MusicHub.DataProcessor
 
         public static string ImportWriters(MusicHubDbContext context, string jsonString)
         {
-            var writersDto = JsonConvert.DeserializeObject<ImportDtos.WriterDto[]>(jsonString).ToArray();
+            var writersDto = JsonConvert.DeserializeObject<WriterDto[]>(jsonString).ToArray();
             var validWriters = new List<Writer>();
 
             var sb = new StringBuilder();
 
             foreach (var writerDto in writersDto)
             {
-                if (!IsValid(writerDto))
+                var writer = Mapper.Map<Writer>(writerDto);
+
+                if (!IsValid(writer))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
                 }
-
-                var writer = new Writer
-                {
-                    Name = writerDto.Name,
-                    Pseudonym = writerDto.Pseudonym
-                };
 
                 sb.AppendLine(string.Format(SuccessfullyImportedWriter, writer.Name));
                 validWriters.Add(writer);
@@ -66,28 +59,20 @@ namespace MusicHub.DataProcessor
 
         public static string ImportProducersAlbums(MusicHubDbContext context, string jsonString)
         {
-            var producersDto = JsonConvert.DeserializeObject<ImportDtos.ProducerDto[]>(jsonString).ToArray();
+            var producersDto = JsonConvert.DeserializeObject<ProducerDto[]>(jsonString).ToArray();
             var validProducers = new List<Producer>();
 
             var sb = new StringBuilder();
 
             foreach (var producerDto in producersDto)
             {
-                if (!IsValid(producerDto) || !producerDto.Albums.All(IsValid))
+                var producer = Mapper.Map<Producer>(producerDto);
+
+                if (!IsValid(producer) || !producer.Albums.All(IsValid))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
                 }
-
-                var albums = Mapper.Map<Album[]>(producerDto.Albums);
-
-                var producer = new Producer
-                {
-                    Name = producerDto.Name,
-                    Pseudonym = producerDto.Pseudonym,
-                    PhoneNumber = producerDto.PhoneNumber,
-                    Albums = albums
-                };
 
                 if (producer.PhoneNumber == null)
                 {
@@ -196,7 +181,7 @@ namespace MusicHub.DataProcessor
 
         private static bool IsValid(object entity)
         {
-            var validationContext = new ValidationContext(entity);
+            var validationContext = new System.ComponentModel.DataAnnotations.ValidationContext(entity);
             var validationResult = new List<ValidationResult>();
 
             var result = Validator.TryValidateObject(entity, validationContext, validationResult, true);
