@@ -1,19 +1,15 @@
-﻿using System.Globalization;
-using Newtonsoft.Json;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
-using TeisterMask.DataProcessor.ExportDto;
-using ProjectDto = TeisterMask.DataProcessor.ExportDto.ProjectDto;
-using TaskDto = TeisterMask.DataProcessor.ExportDto.TaskDto;
-
-namespace TeisterMask.DataProcessor
+﻿namespace TeisterMask.DataProcessor
 {
     using Data;
+    using Newtonsoft.Json;
     using System;
-    using Formatting = Newtonsoft.Json.Formatting;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Xml;
+    using System.Xml.Serialization;
+    using ExportDto;
 
     public class Serializer
     {
@@ -54,16 +50,15 @@ namespace TeisterMask.DataProcessor
         public static string ExportMostBusiestEmployees(TeisterMaskContext context, DateTime date)
         {
             var employees = context.Employees
-                .Where(e => e.EmployeesTasks.Any(et => et.Task.OpenDate.Date >= date))
-                .OrderByDescending(e => e.EmployeesTasks.Sum(et => et.Task.Id))
-                .ThenBy(e => e.Username)
+                .Where(e => e.EmployeesTasks.Any(et => et.Task.OpenDate >= date))
                 .Select(e =>
                     new EmployeeDto
                     {
                         Username = e.Username,
                         Tasks = e.EmployeesTasks
-                            //.OrderByDescending(et => et.Task.DueDate)
-                            //.ThenBy(et => et.Task.Name)
+                            .Where(et => et.Task.OpenDate >= date)
+                            .OrderByDescending(et => et.Task.DueDate)
+                            .ThenBy(et => et.Task.Name)
                             .Select(et =>
                             new TaskFullDto
                             {
@@ -73,16 +68,15 @@ namespace TeisterMask.DataProcessor
                                 LabelType = et.Task.LabelType.ToString(),
                                 ExecutionType = et.Task.ExecutionType.ToString()
                             })
-                            .OrderByDescending(t => DateTime.ParseExact(t.DueDate, "d", CultureInfo.InvariantCulture))
-                            .ThenBy(t => t.TaskName)
                             .ToArray()
                     })
-                //.OrderByDescending(e => e.Tasks.Length)
-                //.ThenBy(e => e.Username)
+                .ToArray()
+                .OrderByDescending(e => e.Tasks.Length)
+                .ThenBy(e => e.Username)
                 .Take(10)
                 .ToArray();
 
-            var json = JsonConvert.SerializeObject(employees, Formatting.Indented);
+            var json = JsonConvert.SerializeObject(employees, Newtonsoft.Json.Formatting.Indented);
             return json;
         }
     }

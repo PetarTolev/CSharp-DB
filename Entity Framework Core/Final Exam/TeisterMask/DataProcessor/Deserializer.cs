@@ -51,15 +51,6 @@
 
                 foreach (var taskDto in projectDto.Tasks)
                 {
-                    bool isValidExecutionType = Enum.IsDefined(typeof(ExecutionType), taskDto.ExecutionType);
-                    bool isValidLabelType = Enum.IsDefined(typeof(LabelType), taskDto.LabelType);
-
-                    if (isValidExecutionType == false || isValidLabelType == false)
-                    {
-                        sb.AppendLine(ErrorMessage);
-                        continue;
-                    }
-
                     var task = new Task
                     {
                         Name = taskDto.Name,

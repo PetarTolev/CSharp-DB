@@ -1,14 +1,12 @@
-﻿using AutoMapper;
-using TeisterMask.DataProcessor;
-
-namespace TeisterMask
+﻿namespace TeisterMask
 {
+    using AutoMapper;
+    using Data;
+    using DataProcessor;
+    using Microsoft.EntityFrameworkCore;
     using System;
     using System.Globalization;
     using System.IO;
-    using Microsoft.EntityFrameworkCore;
-
-    using Data;
 
     public class StartUp
     {
