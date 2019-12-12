@@ -1,20 +1,7 @@
 Invalid data!
 Invalid data!
 Successfully imported project - America with 2 tasks.
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Successfully imported project - Hyster-Yale with 0 tasks.
-Invalid data!
-Invalid data!
-Invalid data!
+Successfully imported project - Hyster-Yale with 10 tasks.
 Invalid data!
 Invalid data!
 Invalid data!
@@ -131,9 +118,6 @@ Invalid data!
 Invalid data!
 Invalid data!
 Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
 Successfully imported project - First Trust Senior Loan Fund ETF with 1 tasks.
 Invalid data!
 Successfully imported project - New Oriental with 4 tasks.
@@ -147,8 +131,7 @@ Invalid data!
 Invalid data!
 Invalid data!
 Successfully imported project - National Beverage Corp. with 1 tasks.
-Invalid data!
-Successfully imported project - China Lending Corporation with 0 tasks.
+Successfully imported project - China Lending Corporation with 1 tasks.
 Invalid data!
 Invalid data!
 Invalid data!
@@ -187,12 +170,8 @@ Invalid data!
 Invalid data!
 Invalid data!
 Invalid data!
-Invalid data!
-Invalid data!
-Successfully imported project - Key Energy Services, Inc. with 0 tasks.
-Invalid data!
-Invalid data!
-Successfully imported project - Alamos Gold Inc. with 0 tasks.
+Successfully imported project - Key Energy Services, Inc. with 2 tasks.
+Successfully imported project - Alamos Gold Inc. with 2 tasks.
 Invalid data!
 Invalid data!
 Invalid data!
@@ -202,15 +181,6 @@ Invalid data!
 Invalid data!
 Invalid data!
 Successfully imported project - Atlas Air with 0 tasks.
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
 Invalid data!
 Invalid data!
 Invalid data!
@@ -227,10 +197,6 @@ Invalid data!
 Successfully imported project - Magna Inc. with 0 tasks.
 Invalid data!
 Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
 Successfully imported project - Caleres, Inc. with 0 tasks.
 Invalid data!
 Invalid data!
@@ -245,23 +211,6 @@ Invalid data!
 Invalid data!
 Invalid data!
 Successfully imported project - USANA Health Sciences, Inc. with 4 tasks.
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
-Invalid data!
 Invalid data!
 Invalid data!
 Invalid data!

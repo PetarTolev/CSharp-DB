@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Globalization;
+using Newtonsoft.Json;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -54,20 +55,25 @@ namespace TeisterMask.DataProcessor
         {
             var employees = context.Employees
                 .Where(e => e.EmployeesTasks.Any(et => et.Task.OpenDate.Date >= date))
+                .OrderByDescending(e => e.EmployeesTasks.Sum(et => et.Task.Id))
+                .ThenBy(e => e.Username)
                 .Select(e =>
                     new EmployeeDto
                     {
                         Username = e.Username,
-                        Tasks = e.EmployeesTasks.Select(et =>
+                        Tasks = e.EmployeesTasks
+                            //.OrderByDescending(et => et.Task.DueDate)
+                            //.ThenBy(et => et.Task.Name)
+                            .Select(et =>
                             new TaskFullDto
                             {
                                 TaskName = et.Task.Name,
-                                OpenDate = et.Task.OpenDate.ToString("d"),
-                                DueDate = et.Task.DueDate.ToString("d"),
+                                OpenDate = et.Task.OpenDate.ToString("d", CultureInfo.InvariantCulture),
+                                DueDate = et.Task.DueDate.ToString("d", CultureInfo.InvariantCulture),
                                 LabelType = et.Task.LabelType.ToString(),
                                 ExecutionType = et.Task.ExecutionType.ToString()
                             })
-                            .OrderByDescending(t => t.DueDate)
+                            .OrderByDescending(t => DateTime.ParseExact(t.DueDate, "d", CultureInfo.InvariantCulture))
                             .ThenBy(t => t.TaskName)
                             .ToArray()
                     })

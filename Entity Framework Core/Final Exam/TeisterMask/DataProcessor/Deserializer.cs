@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
-using System.Linq;
 using Newtonsoft.Json;
+using System.Linq;
+using TeisterMask.Data.Models.Enums;
 
 namespace TeisterMask.DataProcessor
 {
@@ -37,40 +38,37 @@ namespace TeisterMask.DataProcessor
 
             foreach (var projectDto in projectsDto)
             {
-                var tasks = Mapper.Map<Task[]>(projectDto.Tasks);
-                var validTasks = new List<Task>();
-                var project = Mapper.Map<Project>(projectDto);
-
-                foreach (var task in tasks)
+                var project = new Project
                 {
-                    var a = task.OpenDate.CompareTo(project.OpenDate) <= 0;
-                    //var b = task.DueDate.CompareTo(project.DueDate) >= 0;
-                    bool b;
+                    Name = projectDto.Name,
+                    OpenDate = DateTime.ParseExact(projectDto.OpenDate, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    DueDate = string.IsNullOrEmpty(projectDto.DueDate) ? (DateTime?)null : DateTime.ParseExact(projectDto.DueDate, "dd/MM/yyyy", CultureInfo.InvariantCulture)
+                };
 
-                    if (project.DueDate.HasValue)
-                    {
-                        b = task.DueDate.CompareTo(project.DueDate.Value) >= 0;
-                    }
-                    else
-                    {
-                        b = false;
-                    }
+                if (!IsValid(project))
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
 
-                    if (!IsValid(task) || a || b)
+                foreach (var taskDto in projectDto.Tasks)
+                {
+                    var task = new Task
+                    {
+                        Name = taskDto.Name,
+                        OpenDate = DateTime.ParseExact(taskDto.OpenDate, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                        DueDate = DateTime.ParseExact(taskDto.DueDate, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                        ExecutionType = Enum.Parse<ExecutionType>(taskDto.ExecutionType),
+                        LabelType = Enum.Parse<LabelType>(taskDto.LabelType)
+                    };
+
+                    if (!IsValid(task) || task.OpenDate < project.OpenDate || task.DueDate > project.DueDate)
                     {
                         sb.AppendLine(ErrorMessage);
                         continue;
                     }
 
-                    validTasks.Add(task);
-                }
-
-                project.Tasks = validTasks;
-
-                if (!IsValid(project)) //|| !tasks.All(IsValid)
-                {
-                    sb.AppendLine(ErrorMessage);
-                    continue;
+                    project.Tasks.Add(task);
                 }
 
                 validProjects.Add(project);

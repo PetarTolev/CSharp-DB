@@ -1,7 +1,7 @@
-﻿using System.Xml.Serialization;
-
-namespace TeisterMask.DataProcessor.ImportDto
+﻿namespace TeisterMask.DataProcessor.ImportDto
 {
+    using System.Xml.Serialization;
+
     [XmlType("Project")]
     public class ProjectDto
     {
