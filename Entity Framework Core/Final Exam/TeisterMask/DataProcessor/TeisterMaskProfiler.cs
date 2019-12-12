@@ -14,9 +14,6 @@ namespace TeisterMask.DataProcessor
             this.CreateMap<TaskDto, Task>();
             //.ForMember(t => t.LabelType, x => x.MapFrom(td => Enum.Parse<LabelType>(td.LabelType)))
             //.ForMember(t => t.ExecutionType, x => x.MapFrom(td => Enum.Parse<ExecutionType>(td.ExecutionType)));
-
-            this.CreateMap<EmployeeDto, EmployeeDto>()
-                .ForMember(e => e.EmployeesTasks, x => x.MapFrom(ed => ed.EmployeesTasks));
         }
     }
 }

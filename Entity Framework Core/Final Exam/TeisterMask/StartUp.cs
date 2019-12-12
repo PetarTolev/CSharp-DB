@@ -17,7 +17,7 @@ namespace TeisterMask
             var context = new TeisterMaskContext();
             
             Mapper.Initialize(config => config.AddProfile<TeisterMaskProfiler>());
-            //ResetDatabase(context, shouldDropDatabase: true);
+            ResetDatabase(context, shouldDropDatabase: true);
 
             var projectDir = GetProjectDirectory();
 

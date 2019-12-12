@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
-
-namespace TeisterMask.DataProcessor.ImportDto
+﻿namespace TeisterMask.DataProcessor.ImportDto
 {
+    using Newtonsoft.Json;
+
     public class EmployeeDto
     {
         public string Username { get; set; }
@@ -11,6 +11,6 @@ namespace TeisterMask.DataProcessor.ImportDto
         public string Phone { get; set; }
 
         [JsonProperty("Tasks")]
-        public int[] EmployeesTasks { get; set; }
+        public int[] TaskIds { get; set; }
     }
 }

@@ -1,18 +1,16 @@
-﻿using System.Globalization;
-using Newtonsoft.Json;
-using System.Linq;
-using TeisterMask.Data.Models.Enums;
-
-namespace TeisterMask.DataProcessor
+﻿namespace TeisterMask.DataProcessor
 {
-    using AutoMapper;
     using Data;
     using Data.Models;
+    using Data.Models.Enums;
     using ImportDto;
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Globalization;
     using System.IO;
+    using System.Linq;
     using System.Text;
     using System.Xml.Serialization;
 
@@ -53,6 +51,15 @@ namespace TeisterMask.DataProcessor
 
                 foreach (var taskDto in projectDto.Tasks)
                 {
+                    bool isValidExecutionType = Enum.IsDefined(typeof(ExecutionType), taskDto.ExecutionType);
+                    bool isValidLabelType = Enum.IsDefined(typeof(LabelType), taskDto.LabelType);
+
+                    if (isValidExecutionType == false || isValidLabelType == false)
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
                     var task = new Task
                     {
                         Name = taskDto.Name,
@@ -85,34 +92,46 @@ namespace TeisterMask.DataProcessor
         {
             var employeesDto = JsonConvert.DeserializeObject<EmployeeDto[]>(jsonString).ToArray();
 
-            var validEmployees = new List<Data.Models.Employee>();
-            var sb =new StringBuilder();
+            var validEmployees = new List<Employee>();
+            var sb = new StringBuilder();
 
             foreach (var employeeDto in employeesDto)
             {
-                var tasksId = context.Tasks.Select(t => t.Id);
+                var employee = new Employee
+                {
+                    Username = employeeDto.Username,
+                    Email = employeeDto.Email,
+                    Phone = employeeDto.Phone
+                };
 
-                if (!IsValid(employeeDto) || !tasksId.Any(x => employeeDto.EmployeesTasks.Contains(x)))
+                if (!IsValid(employee))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
                 }
 
-                var employee = Mapper.Map<Data.Models.Employee>((object)employeeDto);
+                var tasks = employeeDto.TaskIds.Distinct();
 
-                //var employee = new Employee
-                //{
-                //    Username = employeeDto.Username,
-                //    Email = employeeDto.Email,
-                //    Phone = employeeDto.Phone,
-                //    EmployeesTasks = 
-                //};
+                foreach (var taskId in tasks)
+                {
+                    if (!context.Tasks.Any(t => t.Id == taskId))
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+                    var employeeTask = new EmployeeTask
+                    {
+                        TaskId = taskId
+                    };
+
+                    employee.EmployeesTasks.Add(employeeTask);
+                }
 
                 validEmployees.Add(employee);
                 sb.AppendLine(string.Format(SuccessfullyImportedEmployee, employee.Username,
-                    employee.EmployeesTasks.Sum(et => et.Task.Id)));
+                    employee.EmployeesTasks.Count));
             }
-            
 
             context.Employees.AddRange(validEmployees);
             context.SaveChanges();
@@ -122,7 +141,7 @@ namespace TeisterMask.DataProcessor
 
         private static bool IsValid(object dto)
         {
-            var validationContext = new System.ComponentModel.DataAnnotations.ValidationContext(dto);
+            var validationContext = new ValidationContext(dto);
             var validationResult = new List<ValidationResult>();
 
             return Validator.TryValidateObject(dto, validationContext, validationResult, true);
